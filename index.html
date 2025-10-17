@@ -7,10 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
-      --primary-color: #e3f2fd;
-      --secondary-color: #bbdefb;
       --text-color: #333;
       --bg-color: #ffffff;
+      --font-family: 'Segoe UI', sans-serif;
     }
 
     * {
@@ -18,7 +17,7 @@
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: var(--font-family);
     }
 
     body {
@@ -27,19 +26,20 @@
     }
 
     header {
-      background-color: var(--primary-color);
+      background: linear-gradient(90deg, #90caf9, #bbdefb);
       padding: 2rem;
       text-align: center;
+      color: #0d47a1;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1rem;
-      color: #555;
+      color: #0d47a1;
     }
 
     .section {
@@ -50,51 +50,56 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .card {
-      background-color: var(--secondary-color);
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      background-color: #90caf9;
+      margin-top: 1.5rem;
     }
 
     .card a {
+      display: block;
+      padding: 1.2rem;
+      border-radius: 12px;
+      text-align: center;
       text-decoration: none;
-      color: var(--text-color);
       font-weight: bold;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .card a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Semester color styles */
+    .sem1 a { background: linear-gradient(135deg, #42a5f5, #64b5f6); }
+    .sem2 a { background: linear-gradient(135deg, #66bb6a, #81c784); }
+    .sem3 a { background: linear-gradient(135deg, #ffb74d, #ffcc80); }
+    .sem4 a { background: linear-gradient(135deg, #ef5350, #e57373); }
+    .sem5 a { background: linear-gradient(135deg, #ab47bc, #ba68c8); }
+    .sem6 a { background: linear-gradient(135deg, #26a69a, #4db6ac); }
+    .sem7 a { background: linear-gradient(135deg, #5c6bc0, #7986cb); }
+    .sem8 a { background: linear-gradient(135deg, #ffa726, #ffb74d); }
+
     footer {
-      background-color: var(--primary-color);
+      background: linear-gradient(90deg, #bbdefb, #90caf9);
       padding: 1rem;
       text-align: center;
+      color: #0d47a1;
     }
 
     .social-icons a {
       display: inline-block;
-      margin: 10px 0;
-      color: #333;
-      font-size: 1.1rem;
+      margin: 10px 8px;
+      color: #0d47a1;
+      font-size: 1.2rem;
       text-decoration: none;
     }
 
-    .social-icons i {
-      margin-right: 8px;
-    }
+    .social-icons i { margin-right: 6px; }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
+      header h1 { font-size: 1.6rem; }
     }
   </style>
 </head>
@@ -105,35 +110,26 @@
   </header>
 
   <section class="section">
-    <h2>Resources</h2>
+    <h2 style="text-align:center; color:#1565c0;">Semester Notes</h2>
     <div class="grid">
-      <div class="card">
-        <a href="https://drive.google.com/drive/folders/11bzXrlD-1QZfluoqma6Z1yhNKrmuYi7q?usp=drive_link" target="_blank">
-          📚 Semester-wise Notes
-        </a>
-      </div>
+      <div class="card sem1"><a href="https://drive.google.com/drive/folders/1M--8VsrXcPJhD3iWL9RBObCcleZ4Ob7m?usp=drive_link" target="_blank">📘 Semester 1</a></div>
+      <div class="card sem2"><a href="https://drive.google.com/drive/folders/1SY3jfCmG_KUqrssqOjnmYmJL9oVB-zyG?usp=drive_link" target="_blank">📗 Semester 2</a></div>
+      <div class="card sem3"><a href="https://drive.google.com/drive/folders/1dUwDqoSlbw2y-a2qL5Lqe-PeCJjX8sY7?usp=drive_link" target="_blank">📙 Semester 3</a></div>
+      <div class="card sem4"><a href="#" target="_blank">📕 Semester 4</a></div>
+      <div class="card sem5"><a href="#" target="_blank">📔 Semester 5</a></div>
+      <div class="card sem6"><a href="#" target="_blank">📒 Semester 6</a></div>
+      <div class="card sem7"><a href="#" target="_blank">📓 Semester 7</a></div>
+      <div class="card sem8"><a href="#" target="_blank">📔 Semester 8</a></div>
     </div>
   </section>
 
   <section class="section">
-    <h2>Contact Us</h2>
-    <p>Feel free to connect with us:</p>
-    <div class="social-icons">
-      <p>
-        <a href="https://www.instagram.com/harshjain403/" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram: @harshjain403
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/harsh-jain-9a606b337/" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn: Harsh Jain
-        </a>
-      </p>
-      <p>
-        <a href="https://wa.me/919284696486" target="_blank">
-          <i class="fab fa-whatsapp"></i> WhatsApp: +91 92846 96486
-        </a>
-      </p>
+    <h2 style="text-align:center; color:#1565c0;">Contact Us</h2>
+    <p style="text-align:center;">Feel free to connect with us:</p>
+    <div class="social-icons" style="text-align:center;">
+      <a href="https://www.instagram.com/harshjain403/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://www.linkedin.com/in/harsh-jain-9a606b337/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://wa.me/919284696486" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
     </div>
   </section>
 
