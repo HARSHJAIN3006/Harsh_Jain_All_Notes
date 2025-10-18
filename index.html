@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
-      --text-color: #333;
-      --bg-color: #ffffff;
+      --text-color: #fff;
       --font-family: 'Segoe UI', sans-serif;
     }
 
@@ -21,25 +20,39 @@
     }
 
     body {
-      background-color: var(--bg-color);
       color: var(--text-color);
+      background: url("IMG_20251017_230148.jpg") no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
     }
 
     header {
-      background: linear-gradient(90deg, #90caf9, #bbdefb);
-      padding: 2rem;
       text-align: center;
-      color: #0d47a1;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     header h1 {
       font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+      color: #bbdefb;
     }
 
     header p {
-      font-size: 1rem;
-      color: #0d47a1;
+      font-size: 1.1rem;
+      color: #e3f2fd;
     }
 
     .section {
@@ -48,11 +61,17 @@
       margin: auto;
     }
 
+    .section h2 {
+      text-align: center;
+      color: #bbdefb;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 6px rgba(0,0,0,0.5);
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
-      margin-top: 1.5rem;
     }
 
     .card a {
@@ -67,8 +86,8 @@
     }
 
     .card a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(255,255,255,0.4);
     }
 
     /* Semester color styles */
@@ -82,16 +101,23 @@
     .sem8 a { background: linear-gradient(135deg, #ffa726, #ffb74d); }
 
     footer {
-      background: linear-gradient(90deg, #bbdefb, #90caf9);
+      background: rgba(0, 0, 0, 0.6);
       padding: 1rem;
       text-align: center;
-      color: #0d47a1;
+      color: #e3f2fd;
+      margin-top: 2rem;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 1rem;
     }
 
     .social-icons a {
       display: inline-block;
       margin: 10px 8px;
-      color: #0d47a1;
+      color: #e3f2fd;
       font-size: 1.2rem;
       text-decoration: none;
     }
@@ -110,23 +136,23 @@
   </header>
 
   <section class="section">
-    <h2 style="text-align:center; color:#1565c0;">Semester Notes</h2>
+    <h2>Semester Notes</h2>
     <div class="grid">
       <div class="card sem1"><a href="https://drive.google.com/drive/folders/1M--8VsrXcPJhD3iWL9RBObCcleZ4Ob7m?usp=drive_link" target="_blank">📘 Semester 1</a></div>
       <div class="card sem2"><a href="https://drive.google.com/drive/folders/1SY3jfCmG_KUqrssqOjnmYmJL9oVB-zyG?usp=drive_link" target="_blank">📗 Semester 2</a></div>
       <div class="card sem3"><a href="https://drive.google.com/drive/folders/1dUwDqoSlbw2y-a2qL5Lqe-PeCJjX8sY7?usp=drive_link" target="_blank">📙 Semester 3</a></div>
-      <div class="card sem4"><a href="#" target="_blank">📕 Semester 4</a></div>
-      <div class="card sem5"><a href="#" target="_blank">📔 Semester 5</a></div>
-      <div class="card sem6"><a href="#" target="_blank">📒 Semester 6</a></div>
-      <div class="card sem7"><a href="#" target="_blank">📓 Semester 7</a></div>
-      <div class="card sem8"><a href="#" target="_blank">📔 Semester 8</a></div>
+      <div class="card sem4"><a href="#">📕 Semester 4</a></div>
+      <div class="card sem5"><a href="#">📔 Semester 5</a></div>
+      <div class="card sem6"><a href="#">📒 Semester 6</a></div>
+      <div class="card sem7"><a href="#">📓 Semester 7</a></div>
+      <div class="card sem8"><a href="#">📔 Semester 8</a></div>
     </div>
   </section>
 
   <section class="section">
-    <h2 style="text-align:center; color:#1565c0;">Contact Us</h2>
+    <h2>Contact Us</h2>
     <p style="text-align:center;">Feel free to connect with us:</p>
-    <div class="social-icons" style="text-align:center;">
+    <div class="social-icons">
       <a href="https://www.instagram.com/harshjain403/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
       <a href="https://www.linkedin.com/in/harsh-jain-9a606b337/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
       <a href="https://wa.me/919284696486" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
